@@ -45,7 +45,7 @@
                         'float-slow': 'float 8s ease-in-out infinite',
                         'blob': 'blob 10s infinite',
                         'marquee': 'marquee 40s linear infinite',
-                        'marquee-reverse': 'marquee-reverse 45s linear infinite',
+                        'marquee-reverse': 'marquee-reverse 40s linear infinite',
                     },
                     keyframes: {
                         float: {
@@ -60,10 +60,10 @@
                         },
                         marquee: {
                             '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
+                            '100%': { transform: 'translateX(-100%)' },
                         },
                         'marquee-reverse': {
-                            '0%': { transform: 'translateX(-50%)' },
+                            '0%': { transform: 'translateX(-100%)' },
                             '100%': { transform: 'translateX(0)' },
                         }
                     }
@@ -134,8 +134,25 @@
         #lightbox img { transform: scale(0.9); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
         #lightbox.active img { transform: scale(1); }
         
-        .marquee-container { width: 200%; display: flex; gap: 2rem; }
-        .marquee-container:hover { animation-play-state: paused; }
+        /* Fixed Marquee Setup */
+        .marquee-wrapper { 
+            display: flex; 
+            overflow: hidden; 
+            width: 100%; 
+            mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); 
+            -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        }
+        .marquee-content { 
+            display: flex; 
+            flex-shrink: 0; 
+            min-width: 100%; 
+            gap: 2rem; 
+            padding-right: 2rem; 
+        }
+        .marquee-wrapper:hover .animate-marquee,
+        .marquee-wrapper:hover .animate-marquee-reverse { 
+            animation-play-state: paused; 
+        }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-taupe selection:text-white">
@@ -144,8 +161,8 @@
         <div class="max-w-[90rem] mx-auto px-6 md:px-12 flex justify-between items-center">
             
             <a href="#" class="group flex items-center gap-4">
-                <div class="w-14 h-14 rounded-full overflow-hidden shadow-glow border-2 border-transparent group-hover:border-brand-taupe transition-colors duration-500">
-                    <img src="https://github.com/agelmet/ZERVA/blob/main/asaaaaa.jpg?raw=true" alt="Μαρία Ζέρβα Logo" class="w-full h-full object-cover">
+                <div class="w-16 h-16 rounded-full bg-white p-1 overflow-hidden shadow-glow border-2 border-transparent group-hover:border-brand-taupe transition-colors duration-500 flex items-center justify-center">
+                    <img src="https://github.com/agelmet/ZERVA/blob/main/asaaaaa.jpg?raw=true" alt="Μαρία Ζέρβα Logo" class="w-full h-full object-contain object-center">
                 </div>
             </a>
             
@@ -189,7 +206,7 @@
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-tight mb-4 drop-shadow-lg">
                         Γνωσιακή Συμπεριφορική Θεραπεία (CBT)
                     </h1>
-                    <p class="text-xl md:text-2xl font-light text-brand-sand italic drop-shadow-md">
+                    <p class="text-xl md:text-2xl font-medium text-white italic drop-shadow-md tracking-wide">
                         Μεθοδικά Βήματα, Ορατή Αλλαγή
                     </p>
                 </div>
@@ -262,8 +279,12 @@
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="group relative bg-brand-stone p-10 rounded-3xl border border-transparent hover:border-brand-taupe/30 hover:bg-white hover:shadow-float transition-all duration-500 reveal">
                     <div class="absolute top-0 left-10 w-12 h-1 bg-brand-taupe scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
-                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 group-hover:-translate-y-2 transition-transform duration-500">
-                        <i data-lucide="brain" class="w-7 h-7 text-brand-taupe"></i>
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 transition-transform duration-500 p-2">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="#2A2928" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full group-hover:-translate-y-2 transition-transform duration-500">
+                            <path d="M16 24 Q 32 8 48 24 T 48 48 Q 32 56 16 48 Z" fill="#b5a28f" fill-opacity="0.3" stroke="none"/>
+                            <path d="M32 14 C 20 14 16 26 16 36 C 16 46 22 52 32 52 C 42 52 48 46 48 36 C 48 26 44 14 32 14 Z" />
+                            <path d="M24 36 C 28 30 36 30 40 36" />
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Διαχείριση Άγχους, Φοβιών & Κρίσεων Πανικού (CBT)</h3>
                     <p class="text-brand-dark/70 font-light mb-8 line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
@@ -278,8 +299,14 @@
 
                 <div class="group relative bg-brand-stone p-10 rounded-3xl border border-transparent hover:border-brand-taupe/30 hover:bg-white hover:shadow-float transition-all duration-500 reveal delay-100">
                     <div class="absolute top-0 left-10 w-12 h-1 bg-brand-taupe scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
-                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 group-hover:-translate-y-2 transition-transform duration-500">
-                        <i data-lucide="heart-pulse" class="w-7 h-7 text-brand-taupe"></i>
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 transition-transform duration-500 p-2">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="#2A2928" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full group-hover:-translate-y-2 transition-transform duration-500">
+                            <circle cx="32" cy="32" r="16" fill="#b5a28f" fill-opacity="0.3" stroke="none"/>
+                            <path d="M32 54 L 32 24" />
+                            <path d="M32 40 C 22 40 20 28 20 28 C 24 28 32 32 32 40" />
+                            <path d="M32 32 C 42 32 44 20 44 20 C 40 20 32 24 32 32" />
+                            <circle cx="32" cy="18" r="4" />
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Κατάθλιψη, Διαχείριση Θυμού & Διατροφικές Διαταραχές</h3>
                     <p class="text-brand-dark/70 font-light mb-8 line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
@@ -294,8 +321,16 @@
 
                 <div class="group relative bg-brand-stone p-10 rounded-3xl border border-transparent hover:border-brand-taupe/30 hover:bg-white hover:shadow-float transition-all duration-500 reveal delay-200">
                     <div class="absolute top-0 left-10 w-12 h-1 bg-brand-taupe scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
-                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 group-hover:-translate-y-2 transition-transform duration-500">
-                        <i data-lucide="users-round" class="w-7 h-7 text-brand-taupe"></i>
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 transition-transform duration-500 p-2">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="#2A2928" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full group-hover:-translate-y-2 transition-transform duration-500">
+                            <rect x="20" y="16" width="32" height="24" rx="8" fill="#b5a28f" fill-opacity="0.3" stroke="none"/>
+                            <rect x="14" y="24" width="28" height="20" rx="6" />
+                            <path d="M18 44 L 18 50 L 26 44" />
+                            <rect x="26" y="12" width="28" height="20" rx="6" />
+                            <path d="M46 12 L 46 6 L 38 12" />
+                            <line x1="20" y1="34" x2="30" y2="34" />
+                            <line x1="32" y1="22" x2="42" y2="22" />
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Διαπροσωπικές Σχέσεις & Online Ψυχοθεραπεία</h3>
                     <p class="text-brand-dark/70 font-light mb-8 line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
@@ -379,30 +414,30 @@
                 </div>
             </div>
 
-            <div class="columns-1 sm:columns-2 lg:columns-2 gap-6 space-y-6">
-                <div class="break-inside-avoid relative group cursor-zoom-in reveal rounded-2xl overflow-hidden" onclick="openLightbox('https://github.com/agelmet/ZERVA/blob/main/s2.jpg?raw=true')">
-                    <img src="https://github.com/agelmet/ZERVA/blob/main/s2.jpg?raw=true" alt="Χώρος 1" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="relative group cursor-zoom-in reveal rounded-2xl overflow-hidden aspect-[4/3]" onclick="openLightbox('https://github.com/agelmet/ZERVA/blob/main/s2.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/ZERVA/blob/main/s2.jpg?raw=true" alt="Χώρος 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                         <div class="bg-white/90 p-4 rounded-full backdrop-blur-sm transform scale-50 group-hover:scale-100 transition-transform duration-500"><i data-lucide="maximize-2" class="w-6 h-6 text-brand-taupe"></i></div>
                     </div>
                 </div>
                 
-                <div class="break-inside-avoid relative group cursor-zoom-in reveal delay-100 rounded-2xl overflow-hidden" onclick="openLightbox('https://github.com/agelmet/ZERVA/blob/main/s3.jpg?raw=true')">
-                    <img src="https://github.com/agelmet/ZERVA/blob/main/s3.jpg?raw=true" alt="Χώρος 2" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700">
+                <div class="relative group cursor-zoom-in reveal delay-100 rounded-2xl overflow-hidden aspect-[4/3]" onclick="openLightbox('https://github.com/agelmet/ZERVA/blob/main/s3.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/ZERVA/blob/main/s3.jpg?raw=true" alt="Χώρος 2" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                         <div class="bg-white/90 p-4 rounded-full backdrop-blur-sm transform scale-50 group-hover:scale-100 transition-transform duration-500"><i data-lucide="maximize-2" class="w-6 h-6 text-brand-taupe"></i></div>
                     </div>
                 </div>
 
-                <div class="break-inside-avoid relative group cursor-zoom-in reveal delay-200 rounded-2xl overflow-hidden" onclick="openLightbox('https://github.com/agelmet/ZERVA/blob/main/sp533.jpg?raw=true')">
-                    <img src="https://github.com/agelmet/ZERVA/blob/main/sp533.jpg?raw=true" alt="Χώρος 3" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700">
+                <div class="relative group cursor-zoom-in reveal delay-200 rounded-2xl overflow-hidden aspect-[4/3]" onclick="openLightbox('https://github.com/agelmet/ZERVA/blob/main/sp533.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/ZERVA/blob/main/sp533.jpg?raw=true" alt="Χώρος 3" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                         <div class="bg-white/90 p-4 rounded-full backdrop-blur-sm transform scale-50 group-hover:scale-100 transition-transform duration-500"><i data-lucide="maximize-2" class="w-6 h-6 text-brand-taupe"></i></div>
                     </div>
                 </div>
 
-                <div class="break-inside-avoid relative group cursor-zoom-in reveal delay-300 rounded-2xl overflow-hidden" onclick="openLightbox('https://github.com/agelmet/ZERVA/blob/main/s1.jpg?raw=true')">
-                    <img src="https://github.com/agelmet/ZERVA/blob/main/s1.jpg?raw=true" alt="Χώρος 4" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700">
+                <div class="relative group cursor-zoom-in reveal delay-300 rounded-2xl overflow-hidden aspect-[4/3]" onclick="openLightbox('https://github.com/agelmet/ZERVA/blob/main/s1.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/ZERVA/blob/main/s1.jpg?raw=true" alt="Χώρος 4" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                         <div class="bg-white/90 p-4 rounded-full backdrop-blur-sm transform scale-50 group-hover:scale-100 transition-transform duration-500"><i data-lucide="maximize-2" class="w-6 h-6 text-brand-taupe"></i></div>
                     </div>
@@ -422,8 +457,8 @@
         </div>
 
         <div class="w-full overflow-hidden relative pb-8 mb-4 transform -rotate-1">
-            <div class="marquee-container animate-marquee w-[300%]">
-                <div class="flex space-x-8 px-4">
+            <div class="marquee-wrapper">
+                <div class="marquee-content animate-marquee">
                     <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
@@ -483,8 +518,9 @@
                             <p class="text-xs text-brand-taupe font-medium">04 Σεπ. 2024</p>
                         </div>
                     </div>
-
-                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0" aria-hidden="true">
+                </div>
+                <div class="marquee-content animate-marquee" aria-hidden="true">
+                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
                             <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 grayscale opacity-40 mix-blend-multiply" alt="DoctorAnytime">
@@ -492,10 +528,55 @@
                         <div class="flex items-center gap-1 text-brand-taupe mb-4">
                             <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         </div>
-                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Είμαι πάρα πολύ ευχαριστημένη. Με βοήθησε σε μια πολύ δύσκολη περίοδο στη ζωή μου να βρω αργά και σταθερά τους ρυθμούς..."</p>
+                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Είμαι πάρα πολύ ευχαριστημένη. Με βοήθησε σε μια πολύ δύσκολη περίοδο στη ζωή μου να βρω αργά και σταθερά τους ρυθμούς στην καθημερινότητα μου, να οργανώσω τους στόχους μου και να αποδέχομαι ότι δεν μπορώ να έχω παντού τον έλεγχο. Την συστήνω ανεπιφύλακτα."</p>
                         <div class="border-t border-brand-cloud pt-4 flex justify-between items-end">
                             <p class="text-sm font-bold tracking-widest text-brand-dark uppercase">Νικη</p>
                             <p class="text-xs text-brand-taupe font-medium">02 Φεβ. 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
+                            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 grayscale opacity-40 mix-blend-multiply" alt="DoctorAnytime">
+                        </div>
+                        <div class="flex items-center gap-1 text-brand-taupe mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Η Μαρία με βοήθησε να αντιμετωπίσω τις δυσκολίες που είχα και να πιστέψω περισσότερο στις δυνάμεις μου. Την συστήνω ανεπιφύλακτα!"</p>
+                        <div class="border-t border-brand-cloud pt-4 flex justify-between items-end">
+                            <p class="text-sm font-bold tracking-widest text-brand-dark uppercase">ΖΩΗ</p>
+                            <p class="text-xs text-brand-taupe font-medium">17 Σεπ. 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
+                            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 grayscale opacity-40 mix-blend-multiply" alt="DoctorAnytime">
+                        </div>
+                        <div class="flex items-center gap-1 text-brand-taupe mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Ειμαι παρά πολύ ευχαριστημένη! Σωστή επαγγελματίας και με βοηθάει πολύ."</p>
+                        <div class="border-t border-brand-cloud pt-4 flex justify-between items-end">
+                            <p class="text-sm font-bold tracking-widest text-brand-dark uppercase">Marina</p>
+                            <p class="text-xs text-brand-taupe font-medium">05 Σεπ. 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
+                            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 grayscale opacity-40 mix-blend-multiply" alt="DoctorAnytime">
+                        </div>
+                        <div class="flex items-center gap-1 text-brand-taupe mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Η πρώτη εντύπωση είναι πολύ θετική. Ακουσε με ενσυναισθηση και κατανόηση τις δυσκολίες μου."</p>
+                        <div class="border-t border-brand-cloud pt-4 flex justify-between items-end">
+                            <p class="text-sm font-bold tracking-widest text-brand-dark uppercase">ΤΖΩΡΤΖΙΝΑ</p>
+                            <p class="text-xs text-brand-taupe font-medium">04 Σεπ. 2024</p>
                         </div>
                     </div>
                 </div>
@@ -503,8 +584,8 @@
         </div>
 
         <div class="w-full overflow-hidden relative pt-8 transform rotate-1">
-            <div class="marquee-container animate-marquee-reverse w-[300%]">
-                <div class="flex space-x-8 px-4">
+            <div class="marquee-wrapper">
+                <div class="marquee-content animate-marquee-reverse">
                     <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
@@ -564,8 +645,9 @@
                             <p class="text-xs text-brand-taupe font-medium">12 Αυγ. 2024</p>
                         </div>
                     </div>
-
-                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0" aria-hidden="true">
+                </div>
+                <div class="marquee-content animate-marquee-reverse" aria-hidden="true">
+                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
                             <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 grayscale opacity-40 mix-blend-multiply" alt="DoctorAnytime">
@@ -573,10 +655,55 @@
                         <div class="flex items-center gap-1 text-brand-taupe mb-4">
                             <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
                         </div>
-                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Συστήνω ανεπιφύλακτα την κα Ζέρβα για ατομική ψυχοθεραπεία. Ενέπνευσε από την πρώτη επαφή εμπιστοσύνη..."</p>
+                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Συστήνω ανεπιφύλακτα την κα Ζέρβα για ατομική ψυχοθεραπεία. Ενέπνευσε από την πρώτη επαφή εμπιστοσύνη και αφιέρωσε τον απαιτούμενο χρόνο για τη διερεύνηση του αιτήματός μου. Είναι επαγγελματίας και επέδειξε επίσης ενσυναισθηση και βαθιά κατανόηση."</p>
                         <div class="border-t border-brand-cloud pt-4 flex justify-between items-end">
                             <p class="text-sm font-bold tracking-widest text-brand-dark uppercase">ΕΛΕΝΗ</p>
                             <p class="text-xs text-brand-taupe font-medium">02 Σεπ. 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
+                            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 grayscale opacity-40 mix-blend-multiply" alt="DoctorAnytime">
+                        </div>
+                        <div class="flex items-center gap-1 text-brand-taupe mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Η Μαρία ήταν ο άνθρωπος που με βοήθησε να καταλάβω πόσο δυνατή ειμαι και πόση αυτοπεποίθηση έχω μέσα αλλά την έκρυβα καλά.Ενιωθα μετά από κάθε συνέδρια την βελτίωση. Κι πάντα την εμπιστεύομαι ώστε να εκφραστώ ελεύθερα"</p>
+                        <div class="border-t border-brand-cloud pt-4 flex justify-between items-end">
+                            <p class="text-sm font-bold tracking-widest text-brand-dark uppercase">Afroditi</p>
+                            <p class="text-xs text-brand-taupe font-medium">27 Αυγ. 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
+                            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 grayscale opacity-40 mix-blend-multiply" alt="DoctorAnytime">
+                        </div>
+                        <div class="flex items-center gap-1 text-brand-taupe mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Έχω μείνει απόλυτα ευχαριστημένη με την Μαρία! Με έχει βοηθήσει σε όσα ζητήματα ήθελα να αντιμετωπίσω, πάντα με ευχαρίστηση και φροντίδα. Την συνιστώ χωρίς δεύτερη σκέψη."</p>
+                        <div class="border-t border-brand-cloud pt-4 flex justify-between items-end">
+                            <p class="text-sm font-bold tracking-widest text-brand-dark uppercase">Ιωάννα</p>
+                            <p class="text-xs text-brand-taupe font-medium">26 Αυγ. 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="font-sans text-2xl font-black text-brand-taupe">10.0</span>
+                            <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" class="h-6 grayscale opacity-40 mix-blend-multiply" alt="DoctorAnytime">
+                        </div>
+                        <div class="flex items-center gap-1 text-brand-taupe mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-brand-dark/80 font-serif italic text-lg mb-8 flex-grow leading-relaxed">"Εξαιρετική επαγγελματίας, με έκανε να αισθανθώ άνετα από την πρώτη στιγμή. Ουσιαστική προσέγγιση και με βοήθησε πραγματικά να κατανοήσω και να διαχειριστώ τα θέματα που με απασχολούν."</p>
+                        <div class="border-t border-brand-cloud pt-4 flex justify-between items-end">
+                            <p class="text-sm font-bold tracking-widest text-brand-dark uppercase">Athina</p>
+                            <p class="text-xs text-brand-taupe font-medium">12 Αυγ. 2024</p>
                         </div>
                     </div>
                 </div>
@@ -598,8 +725,8 @@
 
         <div class="max-w-[85rem] mx-auto px-6 grid md:grid-cols-12 gap-16 relative z-10 w-full mb-32">
             <div class="lg:col-span-5 reveal">
-                <div class="w-24 h-24 rounded-full overflow-hidden mb-8 border-4 border-white/20">
-                    <img src="https://github.com/agelmet/ZERVA/blob/main/asaaaaa.jpg?raw=true" alt="Logo" class="w-full h-full object-cover">
+                <div class="w-24 h-24 rounded-full bg-white p-1.5 overflow-hidden mb-8 border-4 border-white/20 flex items-center justify-center">
+                    <img src="https://github.com/agelmet/ZERVA/blob/main/asaaaaa.jpg?raw=true" alt="Logo" class="w-full h-full object-contain object-center">
                 </div>
                 <h3 class="font-serif text-4xl mb-6">Επικοινωνία</h3>
                 <p class="text-white/80 font-light text-lg mb-10 max-w-sm leading-relaxed">
