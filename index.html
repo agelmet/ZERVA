@@ -9,8 +9,10 @@
     <meta name="author" content="Advon Media">
     <meta name="robots" content="index, follow">
     
+    <!-- Favicon -->
     <link rel="icon" href="https://github.com/agelmet/ZERVA/blob/main/asaaaaa.jpg?raw=true" type="image/jpeg">
     
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -157,6 +159,7 @@
 </head>
 <body class="antialiased overflow-x-hidden selection:bg-brand-taupe selection:text-white">
 
+    <!-- Navbar -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6">
         <div class="max-w-[90rem] mx-auto px-6 md:px-12 flex justify-between items-center">
             
@@ -169,7 +172,7 @@
             <div class="hidden lg:flex items-center space-x-10 bg-white/80 backdrop-blur-md px-8 py-3 rounded-full border border-brand-cloud shadow-sm">
                 <a href="#about" class="text-xs font-semibold tracking-widest text-brand-dark hover:text-brand-taupe transition-colors uppercase">Η Ψυχολογος</a>
                 <a href="#services" class="text-xs font-semibold tracking-widest text-brand-dark hover:text-brand-taupe transition-colors uppercase">Υπηρεσιες</a>
-                <a href="#philosophy" class="text-xs font-semibold tracking-widest text-brand-dark hover:text-brand-taupe transition-colors uppercase">Φιλοσοφια</a>
+                <a href="#philosophy" class="text-xs font-semibold tracking-widest text-brand-dark hover:text-brand-taupe transition-colors uppercase">Προσεγγιση</a>
                 <a href="#space" class="text-xs font-semibold tracking-widest text-brand-dark hover:text-brand-taupe transition-colors uppercase">Χωρος</a>
             </div>
 
@@ -185,13 +188,15 @@
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl shadow-float hidden flex-col items-center py-10 space-y-8 border-t border-brand-cloud">
             <a href="#about" class="text-sm font-bold tracking-widest text-brand-dark uppercase mobile-link">Η Ψυχολόγος</a>
             <a href="#services" class="text-sm font-bold tracking-widest text-brand-dark uppercase mobile-link">Υπηρεσίες</a>
-            <a href="#philosophy" class="text-sm font-bold tracking-widest text-brand-dark uppercase mobile-link">Φιλοσοφία</a>
+            <a href="#philosophy" class="text-sm font-bold tracking-widest text-brand-dark uppercase mobile-link">Προσέγγιση</a>
             <a href="#space" class="text-sm font-bold tracking-widest text-brand-dark uppercase mobile-link">Ο Χώρος</a>
             <a href="#contact" class="px-10 py-4 bg-brand-taupe text-white rounded-full text-xs font-bold tracking-widest uppercase mobile-link">Κλείστε Ραντεβού</a>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden bg-brand-dark">
+        <!-- Background Image with vignette rather than heavy overlay -->
         <div class="absolute inset-0 z-0">
             <div class="w-full h-full bg-cover bg-center animate-float-slow transform scale-105 opacity-80" style="background-image: url('https://github.com/agelmet/ZERVA/blob/main/s2.jpg?raw=true');"></div>
         </div>
@@ -199,16 +204,14 @@
 
         <div class="relative z-20 text-center max-w-4xl mx-auto w-full pt-10">
             <div class="reveal active flex flex-col items-center justify-center">
+                <!-- Sleek Glass Container for text to allow background visibility -->
                 <div class="glass-hero rounded-3xl p-8 md:p-12 transform hover:scale-[1.02] transition-transform duration-700">
                     <span class="inline-block py-1.5 px-4 bg-white/10 text-brand-cloud text-xs tracking-[0.3em] uppercase mb-6 rounded-full border border-white/20">
                         Ψυχοθεραπεια Ενηλικων | Κουκακι
                     </span>
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-tight mb-4 drop-shadow-lg">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight drop-shadow-lg">
                         Γνωσιακή Συμπεριφορική Θεραπεία (CBT)
                     </h1>
-                    <p class="text-xl md:text-2xl font-medium text-white italic drop-shadow-md tracking-wide">
-                        Μεθοδικά Βήματα, Ορατή Αλλαγή
-                    </p>
                 </div>
                 
                 <div class="mt-12 flex flex-col sm:flex-row gap-6">
@@ -222,18 +225,22 @@
             </div>
         </div>
         
+        <!-- Scrolling indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
             <i data-lucide="mouse" class="w-6 h-6 text-brand-cloud/70"></i>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="py-32 px-6 bg-brand-stone relative overflow-hidden">
+        <!-- Floating abstract blobs -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-brand-cloud/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob z-0"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-sand/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000 z-0"></div>
 
         <div class="max-w-[85rem] mx-auto relative z-10">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
+                <!-- Text Area: Overlapping Card -->
                 <div class="lg:col-span-7 lg:pr-10 reveal order-2 lg:order-1">
                     <div class="bg-white p-10 md:p-14 rounded-3xl shadow-float border border-brand-cloud/50 relative">
                         <div class="absolute -left-6 top-14 w-12 h-1 bg-brand-taupe hidden md:block"></div>
@@ -242,22 +249,25 @@
                         
                         <div class="space-y-6 text-[1.05rem] font-light text-brand-dark/80 leading-relaxed">
                             <p>
-                                Η Μαρία Ζέρβα είναι αδειούχος Ψυχολόγος (Αρ. Αδείας: 2305) και πιστοποιημένη Γνωσιακή-Συμπεριφορική Ψυχοθεραπεύτρια, διατηρώντας το ιδιωτικό της γραφείο στο Κουκάκι. Διαθέτει ένα εξαιρετικά ισχυρό και διεθνώς αναγνωρισμένο ακαδημαϊκό υπόβαθρο: μετά τις προπτυχιακές της σπουδές στο Πάντειο Πανεπιστήμιο, έγινε δεκτή και ολοκλήρωσε το <strong>Μεταπτυχιακό της (MSc) στην «Κλινική Ψυχολογία και Συνθετική Ψυχοθεραπεία» στο ιστορικό Πανεπιστήμιο της Σορβόννης (Sorbonne) στο Παρίσι</strong>.
+                                Η Μαρία Ζέρβα είναι αδειούχος Ψυχολόγος (Αρ. Αδείας: 2305) και πιστοποιημένη Γνωσιακή-Συμπεριφορική Ψυχοθεραπεύτρια (CBT), με ιδιωτικό γραφείο στο Κουκάκι. Ολοκλήρωσε τις προπτυχιακές της σπουδές στο Πάντειο Πανεπιστήμιο και στη συνέχεια απέκτησε Μεταπτυχιακό (MSc) στην Κλινική Ψυχολογία και Συνθετική Ψυχοθεραπεία από το Πανεπιστήμιο της Σορβόννης στο Παρίσι. Έχει ολοκληρώσει τετραετή εξειδίκευση στη Γνωσιακή Συμπεριφορική Θεραπεία (CBT), με διαπίστευση από την Ευρωπαϊκή Εταιρεία Συμπεριφορικών και Γνωσιακών Θεραπειών (EABCT). Έχει εργαστεί σε δομές ψυχικής υγείας στο Παρίσι και στην Αθήνα, παρέχοντας υποστήριξη σε παιδιά, εφήβους και ενήλικες. Σήμερα εργάζεται ιδιωτικά, προσφέροντας ατομική ψυχοθεραπεία ενηλίκων δια ζώσης και διαδικτυακά.
                             </p>
-                            <p>
-                                Επιστρέφοντας στην Ελλάδα, αφιερώθηκε στην πιο επιστημονικά τεκμηριωμένη προσέγγιση της σύγχρονης ψυχολογίας, ολοκληρώνοντας 4ετή, αυστηρή εξειδίκευση στη <strong>Γνωσιακή Συμπεριφορική Θεραπεία (CBT)</strong>. Η εκπαίδευσή της είναι πλήρως διαπιστευμένη από την <strong>Ευρωπαϊκή Εταιρεία Συμπεριφορικών και Γνωσιακών Θεραπειών (EABCT)</strong>, γεγονός που εγγυάται την απόλυτη εγκυρότητα των παρεμβάσεών της.
-                            </p>
-                            <p>
-                                Η κλινική της ματιά έχει σφυρηλατηθεί μέσα από την εργασία της σε απαιτητικές δομές ψυχικής υγείας τόσο στο Παρίσι όσο και στην Αθήνα, όπου υποστήριξε παιδιά, εφήβους και ενήλικες. Σήμερα, στο ιδιωτικό της γραφείο, εστιάζει αποκλειστικά στην <strong>ατομική ψυχοθεραπεία ενηλίκων</strong>. Προσεγγίζει τον κάθε θεραπευόμενο με ενσυναίσθηση, βοηθώντας τον να εντοπίσει τις δυσλειτουργικές σκέψεις του και να ανακτήσει τον έλεγχο της καθημερινότητάς του.
+                        </div>
+                        
+                        <div class="mt-8 p-5 bg-brand-stone rounded-xl border border-brand-cloud">
+                            <h4 class="font-bold text-brand-taupe text-xs uppercase tracking-[0.15em] mb-2">Ακαδημαϊκές Συμμετοχές</h4>
+                            <p class="text-sm text-brand-dark/80 leading-relaxed">
+                                Εργαστήρι: Ο ρόλος των θετικών σχημάτων στην θεραπεία παιδιών και εφήβων., 8ο Πανελλήνιο Συνέδριο Συμβουλευτικής και 3ο Πανελλήνιο Συνέδριο Θετικής Ψυχολογίας (2023)
                             </p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Image Area: Parallax & Masking -->
                 <div class="lg:col-span-5 reveal delay-200 order-1 lg:order-2 relative">
                     <div class="img-mask bg-brand-cloud p-2 rounded-xl">
                         <img src="https://github.com/agelmet/ZERVA/blob/main/her1.jpg?raw=true" alt="Μαρία Ζέρβα - Ψυχολόγος" class="w-full h-auto object-cover rounded-lg shadow-inner-soft">
                     </div>
+                    <!-- Aesthetic floating badge -->
                     <div class="absolute -bottom-6 -right-6 bg-brand-dark text-white p-6 rounded-full shadow-glow animate-float-slow hidden md:flex flex-col items-center justify-center w-32 h-32 border-4 border-brand-stone">
                         <span class="font-serif text-2xl font-bold">EABCT</span>
                         <span class="text-[9px] uppercase tracking-widest mt-1">Πιστοποιηση</span>
@@ -268,6 +278,7 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services" class="py-32 px-6 bg-white relative">
         <div class="max-w-[85rem] mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-24 reveal">
@@ -276,30 +287,31 @@
                 <div class="w-20 h-[2px] bg-brand-cloud mx-auto"></div>
             </div>
 
-            <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Changed to 2 columns for 4 symmetrical items -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Service 1: Άγχος -->
                 <div class="group relative bg-brand-stone p-10 rounded-3xl border border-transparent hover:border-brand-taupe/30 hover:bg-white hover:shadow-float transition-all duration-500 reveal">
                     <div class="absolute top-0 left-10 w-12 h-1 bg-brand-taupe scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
                     <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 transition-transform duration-500 p-2">
+                        <!-- Custom Minimalist Vector Icon: Anxiety (Mind/Calm) -->
                         <svg viewBox="0 0 64 64" fill="none" stroke="#2A2928" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full group-hover:-translate-y-2 transition-transform duration-500">
                             <path d="M16 24 Q 32 8 48 24 T 48 48 Q 32 56 16 48 Z" fill="#b5a28f" fill-opacity="0.3" stroke="none"/>
                             <path d="M32 14 C 20 14 16 26 16 36 C 16 46 22 52 32 52 C 42 52 48 46 48 36 C 48 26 44 14 32 14 Z" />
                             <path d="M24 36 C 28 30 36 30 40 36" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Διαχείριση Άγχους, Φοβιών & Κρίσεων Πανικού (CBT)</h3>
-                    <p class="text-brand-dark/70 font-light mb-8 line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
-                        Όταν το άγχος και οι κρίσεις πανικού επιβάλλουν τους δικούς τους κανόνες, η Γνωσιακή Συμπεριφορική Θεραπεία προσφέρει τη διέξοδο. Δουλεύουμε συνεργατικά για να αποκωδικοποιήσουμε τον μηχανισμό του φόβου σας. Μαθαίνετε πώς να αναγνωρίζετε τα "λάθη" της σκέψης σας, να εκτίθεστε σταδιακά σε όσα σας τρομάζουν και να εφαρμόζετε πρακτικές τεχνικές χαλάρωσης, ώστε να επαναφέρετε την ηρεμία στο σώμα και το μυαλό σας στο «εδώ και τώρα».
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Διαχείριση αγχώδων διαταραχών</h3>
+                    <p class="text-brand-dark/70 font-light leading-relaxed">
+                        Στις αγχώδεις διαταραχές, το άτομο συχνά παγιδεύεται σε έναν φαύλο κύκλο όπου οι αγχωτικές σκέψεις οδηγούν σε έντονα σωματικά συμπτώματα και αποφυγές, οι οποίες τελικά διατηρούν και ενισχύουν το άγχος. Το άτομο εκπαιδεύεται ώστε να κατανοεί πώς λειτουργεί το άγχος, να αναγνωρίζει τις σκέψεις και τις συμπεριφορές που το συντηρούν και μαθαίνει πιο λειτουργικούς τρόπους διαχείρισης, ώστε να μειωθεί σταδιακά η ένταση των συμπτωμάτων και να επανέλθει η αίσθηση ελέγχου στην καθημερινότητα.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] font-bold uppercase tracking-widest bg-brand-cloud/40 px-3 py-1.5 rounded-full text-brand-dark">Άγχος 50'</span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest bg-brand-cloud/40 px-3 py-1.5 rounded-full text-brand-dark">Πανικός 50'</span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest bg-brand-cloud/40 px-3 py-1.5 rounded-full text-brand-dark">Φοβίες 50'</span>
-                    </div>
                 </div>
 
+                <!-- Service 2: Διάθεση -->
                 <div class="group relative bg-brand-stone p-10 rounded-3xl border border-transparent hover:border-brand-taupe/30 hover:bg-white hover:shadow-float transition-all duration-500 reveal delay-100">
                     <div class="absolute top-0 left-10 w-12 h-1 bg-brand-taupe scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
                     <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 transition-transform duration-500 p-2">
+                        <!-- Custom Minimalist Vector Icon: Mood (Balance/Growth) -->
                         <svg viewBox="0 0 64 64" fill="none" stroke="#2A2928" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full group-hover:-translate-y-2 transition-transform duration-500">
                             <circle cx="32" cy="32" r="16" fill="#b5a28f" fill-opacity="0.3" stroke="none"/>
                             <path d="M32 54 L 32 24" />
@@ -308,112 +320,113 @@
                             <circle cx="32" cy="18" r="4" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Κατάθλιψη, Διαχείριση Θυμού & Διατροφικές Διαταραχές</h3>
-                    <p class="text-brand-dark/70 font-light mb-8 line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
-                        Η καταθλιπτική διάθεση, τα ανεξέλεγκτα ξεσπάσματα θυμού και η διαταραγμένη σχέση με το φαγητό πηγάζουν συχνά από βαθιά ριζωμένες, αρνητικές πεποιθήσεις για τον εαυτό μας. Στις συνεδρίες, εστιάζουμε στη σταδιακή συμπεριφορική σας ενεργοποίηση. Αναδομούμε τον τρόπο που ερμηνεύετε την πραγματικότητα, βρίσκουμε λειτουργικούς τρόπους για να εκφράζετε τα όριά σας και αποκαθιστούμε μια υγιή σχέση με την αυτοεικόνα σας.
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Διαχείριση διαταραχών διάθεσης</h3>
+                    <p class="text-brand-dark/70 font-light leading-relaxed">
+                        Στις διαταραχές διάθεσης, το άτομο μπορεί να βιώνει επίμονη θλίψη, μειωμένη ενέργεια, απώλεια ενδιαφέροντος, έντονη ευαισθησία ή δυσκολία να ανταποκριθεί στην καθημερινότητα όπως παλαιότερα. Συχνά δημιουργείται ένας κύκλος αρνητικών σκέψεων, απογοήτευσης και απομάκρυνσης από δραστηριότητες και σχέσεις, που διατηρεί τη συναισθηματική δυσφορία. Το άτομο μαθαίνει να αναγνωρίζει τα μοτίβα σκέψης και συμπεριφοράς που επηρεάζουν τη διάθεση και να αναπτύσσει πιο λειτουργικούς τρόπους διαχείρισης, ενισχύοντας σταδιακά την ενεργοποίηση, την αυτοφροντίδα και την ψυχική ανθεκτικότητα.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] font-bold uppercase tracking-widest bg-brand-cloud/40 px-3 py-1.5 rounded-full text-brand-dark">Κατάθλιψη 50'</span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest bg-brand-cloud/40 px-3 py-1.5 rounded-full text-brand-dark">Θυμός 50'</span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest bg-brand-cloud/40 px-3 py-1.5 rounded-full text-brand-dark">Διατροφή 50'</span>
-                    </div>
                 </div>
 
-                <div class="group relative bg-brand-stone p-10 rounded-3xl border border-transparent hover:border-brand-taupe/30 hover:bg-white hover:shadow-float transition-all duration-500 reveal delay-200">
+                <!-- Service 3: Πένθος -->
+                <div class="group relative bg-brand-stone p-10 rounded-3xl border border-transparent hover:border-brand-taupe/30 hover:bg-white hover:shadow-float transition-all duration-500 reveal">
                     <div class="absolute top-0 left-10 w-12 h-1 bg-brand-taupe scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
                     <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 transition-transform duration-500 p-2">
+                        <!-- Custom Minimalist Vector Icon: Grief (Abstract Heart/Leaf fading) -->
                         <svg viewBox="0 0 64 64" fill="none" stroke="#2A2928" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full group-hover:-translate-y-2 transition-transform duration-500">
-                            <rect x="20" y="16" width="32" height="24" rx="8" fill="#b5a28f" fill-opacity="0.3" stroke="none"/>
-                            <rect x="14" y="24" width="28" height="20" rx="6" />
-                            <path d="M18 44 L 18 50 L 26 44" />
-                            <rect x="26" y="12" width="28" height="20" rx="6" />
-                            <path d="M46 12 L 46 6 L 38 12" />
-                            <line x1="20" y1="34" x2="30" y2="34" />
-                            <line x1="32" y1="22" x2="42" y2="22" />
+                            <path d="M32 48 C 32 48 14 34 14 22 C 14 14 24 12 32 20 C 40 12 50 14 50 22 C 50 34 32 48 32 48 Z" fill="#b5a28f" fill-opacity="0.3" stroke="none"/>
+                            <path d="M32 48 C 32 48 14 34 14 22 C 14 14 24 12 32 20 C 40 12 50 14 50 22 C 50 34 32 48 32 48 Z" />
+                            <path d="M22 28 C 26 28 30 24 30 24" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Διαπροσωπικές Σχέσεις & Online Ψυχοθεραπεία</h3>
-                    <p class="text-brand-dark/70 font-light mb-8 line-clamp-4 group-hover:line-clamp-none transition-all duration-500">
-                        Τα μοτίβα επικοινωνίας που χρησιμοποιούμε καθορίζουν την ποιότητα των σχέσεών μας. Μέσα από τη θεραπεία, εντοπίζουμε τα εμπόδια που σας κρατούν σε δυσλειτουργικές σχέσεις και χτίζουμε δεξιότητες διεκδικητικότητας. Για όσους δεν μπορούν να προσέλθουν στο γραφείο στο Κουκάκι (λόγω απόστασης ή περιορισμένου χρόνου), όλες οι υπηρεσίες παρέχονται και διαδικτυακά (μέσω βιντεοκλήσης), με απόλυτη εχεμύθεια και ασφάλεια.
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Διαχείριση πένθους</h3>
+                    <p class="text-brand-dark/70 font-light leading-relaxed">
+                        Το πένθος είναι μια φυσική, αλλά ιδιαίτερα δύσκολη διαδικασία προσαρμογής μετά την απώλεια ενός σημαντικού προσώπου ή μιας σημαντικής σχέσης. Συχνά συνοδεύεται από έντονη θλίψη, συναισθηματικό κενό, ενοχές ή δυσκολία να επιστρέψει κανείς στην καθημερινότητα όπως πριν. Το άτομο υποστηρίζεται στο να κατανοήσει και να επεξεργαστεί τις σκέψεις και τα συναισθήματα που συνδέονται με την απώλεια, να μειώσει τα δυσλειτουργικά μοτίβα (όπως οι ενοχές ή η αποφυγή) και σταδιακά να επανασυνδεθεί με τη ζωή, σεβόμενο τον ρυθμό της διεργασίας του πένθους.
                     </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] font-bold uppercase tracking-widest bg-brand-cloud/40 px-3 py-1.5 rounded-full text-brand-dark">Σχέσεις 50'</span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest bg-brand-cloud/40 px-3 py-1.5 rounded-full text-brand-dark">Online 50'</span>
-                    </div>
                 </div>
+                
+                <!-- Service 4: Αυτοεκτίμηση -->
+                <div class="group relative bg-brand-stone p-10 rounded-3xl border border-transparent hover:border-brand-taupe/30 hover:bg-white hover:shadow-float transition-all duration-500 reveal delay-100">
+                    <div class="absolute top-0 left-10 w-12 h-1 bg-brand-taupe scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-8 transition-transform duration-500 p-2">
+                        <!-- Custom Minimalist Vector Icon: Self-Esteem / Empowerment (Star/Abstract Figure) -->
+                        <svg viewBox="0 0 64 64" fill="none" stroke="#2A2928" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full group-hover:-translate-y-2 transition-transform duration-500">
+                            <circle cx="32" cy="20" r="10" fill="#b5a28f" fill-opacity="0.3" stroke="none"/>
+                            <path d="M32 10 L 32 30" />
+                            <path d="M22 20 L 42 20" />
+                            <path d="M32 30 L 24 50" />
+                            <path d="M32 30 L 40 50" />
+                            <path d="M24 38 L 40 38" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4 leading-snug">Αυτοεκτίμηση & Προσωπική Ενδυνάμωση</h3>
+                    <p class="text-brand-dark/70 font-light leading-relaxed">
+                        Η χαμηλή αυτοεκτίμηση, η αναβλητικότητα και η δυσκολία στη διεκδικητική συμπεριφορά συχνά συνδέονται μεταξύ τους και επηρεάζουν τον τρόπο που το άτομο σχετίζεται με τον εαυτό του και τους άλλους. Μπορεί να εκδηλώνονται ως αμφιβολία για τις δυνατότητές μας, δυσκολία στο να αναλάβουμε δράση ή τάση να αποφεύγουμε καταστάσεις που μας αγχώνουν ή μας φέρνουν σε σύγκρουση. Το άτομο μαθαίνει να αναγνωρίζει τα μοτίβα σκέψης που υπονομεύουν την αυτοπεποίθηση και να τα επεξεργάζεται με πιο ρεαλιστικό τρόπο. Παράλληλα, ενισχύεται η ικανότητα για δράση, η ανάληψη ευθύνης και η ανάπτυξη πιο διεκδικητικής συμπεριφοράς στην καθημερινότητα.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Philosophy (Approach) Section -->
     <section id="philosophy" class="py-32 px-6 bg-brand-taupe text-white relative">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
         <div class="max-w-[85rem] mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-10">
             <div class="reveal order-2 lg:order-1">
-                <span class="text-brand-cloud font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Προσεγγιση</span>
-                <h2 class="text-4xl md:text-5xl font-serif text-white mb-8">Η Θεραπευτική μου Φιλοσοφία</h2>
+                <span class="text-brand-cloud font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Μεθοδολογια</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-white mb-8">Προσέγγιση</h2>
                 
-                <p class="text-white/90 font-light text-[1.1rem] mb-10 leading-relaxed bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                    Η ψυχοθεραπεία στο γραφείο μου δεν είναι απλώς μια αόριστη και χαλαρή συζήτηση. Είναι μια δομημένη διαδικασία, με αρχή, μέση και—το κυριότερο—σαφή στόχο. Αντί για γενικές υποσχέσεις, η συνεργασία μας βασίζεται σε έναν ξεκάθαρο «χάρτη»:
+                <p class="text-white/90 font-light text-[1.1rem] mb-6 leading-relaxed bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
+                    Η Γνωσιακή Συμπεριφορική Θεραπεία (CBT) βασίζεται στην κατανόηση ότι οι σκέψεις, τα συναισθήματα, οι σωματικές αντιδράσεις και η συμπεριφορά μας επηρεάζουν διαρκώς το ένα το άλλο. Ο τρόπος με τον οποίο ερμηνεύουμε μια κατάσταση μπορεί να επηρεάσει το πώς αισθανόμαστε συναισθηματικά, πώς αντιδρά το σώμα μας και τελικά πώς συμπεριφερόμαστε. Αντίστοιχα, οι συμπεριφορές και οι εμπειρίες μας μπορούν να ενισχύσουν ή να αλλάξουν τις σκέψεις και τα συναισθήματά μας.
                 </p>
 
-                <ul class="space-y-8">
-                    <li class="flex items-start gap-5 group">
-                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-white group-hover:text-brand-taupe transition-colors duration-300">
-                            <i data-lucide="map" class="w-5 h-5"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-serif text-white mb-2">Το Κύρος της Σορβόννης & του Παρισιού</h4>
-                            <p class="text-white/70 font-light text-sm leading-relaxed">Οι μεταπτυχιακές μου σπουδές στη Γαλλία και η κλινική μου τριβή στις παρισινές δομές ψυχικής υγείας, μου έχουν προσφέρει μια πολυπολιτισμική, βαθιά αναλυτική ματιά. Κατανοώ το "βάθος" του προβλήματος, προτού εφαρμόσω τη λύση.</p>
-                        </div>
+                <p class="text-white/90 font-light text-[1.1rem] mb-4 leading-relaxed">
+                    Μέσα από τη θεραπευτική διαδικασία, το άτομο μαθαίνει να:
+                </p>
+
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-white opacity-60"></div>
+                        <span class="text-white/80 font-light">αναγνωρίζει δυσλειτουργικά μοτίβα σκέψης,</span>
                     </li>
-                    <li class="flex items-start gap-5 group">
-                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-white group-hover:text-brand-taupe transition-colors duration-300">
-                            <i data-lucide="shield-check" class="w-5 h-5"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-serif text-white mb-2">Πιστοποιημένη Ασφάλεια (EABCT)</h4>
-                            <p class="text-white/70 font-light text-sm leading-relaxed">Δεν δηλώνω απλώς ότι "χρησιμοποιώ τεχνικές CBT". Η 4ετής, εντατική μου εκπαίδευση είναι διαπιστευμένη από τον κορυφαίο ευρωπαϊκό φορέα (EABCT), πράγμα που σημαίνει ότι η θεραπεία που λαμβάνετε ακολουθεί τα πιο αυστηρά, παγκόσμια κλινικά πρωτόκολλα.</p>
-                        </div>
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-white opacity-60"></div>
+                        <span class="text-white/80 font-light">κατανοεί τη σύνδεση σώματος και συναισθημάτων,</span>
                     </li>
-                    <li class="flex items-start gap-5 group">
-                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-white group-hover:text-brand-taupe transition-colors duration-300">
-                            <i data-lucide="clock" class="w-5 h-5"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-serif text-white mb-2">Εστίαση στο "Εδώ και Τώρα"</h4>
-                            <p class="text-white/70 font-light text-sm leading-relaxed">Το παρελθόν μας διαμορφώνει, αλλά δεν μας καταδικάζει. Στη CBT δεν αναλωνόμαστε στο να αναλύουμε απλώς τα παιδικά σας χρόνια. Εστιάζουμε στο παρόν: τι σας δυσκολεύει σήμερα και τι μπορούμε να κάνουμε τώρα για να το αλλάξουμε.</p>
-                        </div>
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-white opacity-60"></div>
+                        <span class="text-white/80 font-light">διαχειρίζεται πιο αποτελεσματικά τις αντιδράσεις του,</span>
                     </li>
-                    <li class="flex items-start gap-5 group">
-                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-white group-hover:text-brand-taupe transition-colors duration-300">
-                            <i data-lucide="handshake" class="w-5 h-5"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-serif text-white mb-2">Ισότιμη Συνεργασία (Είμαστε Ομάδα)</h4>
-                            <p class="text-white/70 font-light text-sm leading-relaxed">Εγώ είμαι η ειδικός στην ψυχολογία, αλλά εσείς είστε ο ειδικός της δικής σας ζωής. Δεν θα σας κρίνω και δεν θα σας επιβάλω αποφάσεις. Δουλεύουμε ως ομάδα, βάζουμε στόχους, κάνουμε πρακτικές ασκήσεις και παρακολουθούμε μαζί την πρόοδό σας.</p>
-                        </div>
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-white opacity-60"></div>
+                        <span class="text-white/80 font-light">αναπτύσσει νέους, πιο λειτουργικούς τρόπους αντιμετώπισης.</span>
                     </li>
                 </ul>
+
+                <p class="text-white/90 font-light text-[1.1rem] leading-relaxed">
+                    Η παρέμβαση προσαρμόζεται στις ανάγκες κάθε ανθρώπου, με στόχο τη βελτίωση της ψυχικής ευεξίας και της καθημερινής λειτουργικότητας.
+                </p>
             </div>
 
             <div class="reveal delay-200 order-1 lg:order-2">
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl">
-                    <img src="https://github.com/agelmet/ZERVA/blob/main/her2.jpg?raw=true" alt="Φιλοσοφία Μαρία Ζέρβα" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-2">
+                    <img src="https://raw.githubusercontent.com/agelmet/ZERVA/refs/heads/main/imggs.jpg" alt="Προσέγγιση - CBT" class="w-full h-auto object-cover rounded-2xl transform hover:scale-105 transition-transform duration-1000">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Space Gallery Section -->
     <section id="space" class="py-32 px-6 bg-white relative">
         <div class="max-w-[85rem] mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-end mb-20 reveal gap-8">
                 <div class="max-w-2xl">
                     <span class="text-brand-taupe font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block">Περιβαλλον</span>
                     <h2 class="text-4xl md:text-5xl font-serif text-brand-dark mb-4">Ο Χώρος στο Κουκάκι</h2>
-                    <p class="text-brand-dark/70 font-light text-lg">Ένας ασφαλής, ζεστός και μίνιμαλ χώρος, σχεδιασμένος για να προσφέρει την ηρεμία και την ιδιωτικότητα που απαιτεί η θεραπευτική διαδικασία.</p>
+                    <p class="text-brand-dark/70 font-light text-lg">Ένας ασφαλής, ζεστός χώρος, σχεδιασμένος για να προσφέρει την ηρεμία και την ιδιωτικότητα που απαιτεί η θεραπευτική διαδικασία.</p>
                 </div>
             </div>
 
+            <!-- Fixed Symmetrical Grid Layout -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div class="relative group cursor-zoom-in reveal rounded-2xl overflow-hidden aspect-[4/3]" onclick="openLightbox('https://github.com/agelmet/ZERVA/blob/main/s2.jpg?raw=true')">
                     <img src="https://github.com/agelmet/ZERVA/blob/main/s2.jpg?raw=true" alt="Χώρος 1" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
@@ -446,7 +459,9 @@
         </div>
     </section>
 
+    <!-- UNIQUE REVIEWS SECTION (3D Staggered Marquee - Gap Fixed) -->
     <section class="py-32 bg-brand-stone overflow-hidden relative perspective-container">
+        <!-- Background gradients for depth -->
         <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-stone to-transparent z-20 pointer-events-none"></div>
         <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-stone to-transparent z-20 pointer-events-none"></div>
 
@@ -456,6 +471,7 @@
             <div class="w-16 h-[2px] bg-brand-cloud mx-auto mb-6"></div>
         </div>
 
+        <!-- Track 1 (Left to Right) -->
         <div class="w-full overflow-hidden relative pb-8 mb-4 transform -rotate-1">
             <div class="marquee-wrapper">
                 <div class="marquee-content animate-marquee">
@@ -519,6 +535,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Duplicate for flawless loop -->
                 <div class="marquee-content animate-marquee" aria-hidden="true">
                     <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
                         <div class="flex justify-between items-start mb-6">
@@ -583,6 +600,7 @@
             </div>
         </div>
 
+        <!-- Track 2 (Right to Left) -->
         <div class="w-full overflow-hidden relative pt-8 transform rotate-1">
             <div class="marquee-wrapper">
                 <div class="marquee-content animate-marquee-reverse">
@@ -646,6 +664,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Duplicate for flawless loop -->
                 <div class="marquee-content animate-marquee-reverse" aria-hidden="true">
                     <div class="w-[400px] p-8 rounded-3xl border border-brand-cloud/60 review-card flex flex-col shrink-0">
                         <div class="flex justify-between items-start mb-6">
@@ -718,12 +737,15 @@
         </div>
     </section>
 
+    <!-- FOOTER / CONTACT -->
     <footer id="contact" class="bg-brand-taupe text-white pt-32 pb-10 relative overflow-hidden flex flex-col justify-between">
+        <!-- Massive Background Watermark -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none z-0">
             <h2 class="text-[15vw] font-serif font-black text-white/5 whitespace-nowrap leading-none tracking-tighter mix-blend-overlay">ΜΑΡΙΑ ΖΕΡΒΑ</h2>
         </div>
 
         <div class="max-w-[85rem] mx-auto px-6 grid md:grid-cols-12 gap-16 relative z-10 w-full mb-32">
+            <!-- Left Info -->
             <div class="lg:col-span-5 reveal">
                 <div class="w-24 h-24 rounded-full bg-white p-1.5 overflow-hidden mb-8 border-4 border-white/20 flex items-center justify-center">
                     <img src="https://github.com/agelmet/ZERVA/blob/main/asaaaaa.jpg?raw=true" alt="Logo" class="w-full h-full object-contain object-center">
@@ -740,21 +762,28 @@
 
             <div class="lg:col-span-2 hidden lg:block"></div>
 
+            <!-- Right Info Details -->
             <div class="lg:col-span-5 flex flex-col justify-center gap-12 reveal delay-200">
                 <div>
                     <h4 class="text-[10px] font-sans font-bold text-white/60 mb-6 uppercase tracking-[0.3em]">Στοιχεια Επικοινωνιας</h4>
                     <ul class="space-y-6 text-white text-lg font-light">
                         <li class="flex items-start gap-4 group cursor-default">
-                            <div class="p-3 rounded-full bg-white/10 group-hover:bg-white group-hover:text-brand-taupe transition-colors duration-300">
+                            <div class="p-3 rounded-full bg-white/10 group-hover:bg-white group-hover:text-brand-taupe transition-colors duration-300 shrink-0">
                                 <i data-lucide="map-pin" class="w-5 h-5"></i>
                             </div>
                             <span class="mt-2">Δημητρακοπούλου 50, Κουκάκι, Αττική</span>
                         </li>
                         <li class="flex items-center gap-4 group">
-                            <div class="p-3 rounded-full bg-white/10 group-hover:bg-white group-hover:text-brand-taupe transition-colors duration-300">
+                            <div class="p-3 rounded-full bg-white/10 group-hover:bg-white group-hover:text-brand-taupe transition-colors duration-300 shrink-0">
                                 <i data-lucide="phone" class="w-5 h-5"></i>
                             </div>
                             <a href="tel:+306982040092" class="hover:underline underline-offset-4 decoration-white/50 text-2xl font-serif tracking-widest">+30 698 204 0092</a>
+                        </li>
+                        <li class="flex items-center gap-4 group">
+                            <div class="p-3 rounded-full bg-white/10 group-hover:bg-white group-hover:text-brand-taupe transition-colors duration-300 shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <a href="mailto:maria.k.zerva@gmail.com" class="hover:underline underline-offset-4 decoration-white/50 text-lg tracking-wide">maria.k.zerva@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -762,11 +791,11 @@
                 <div>
                     <h4 class="text-[10px] font-sans font-bold text-white/60 mb-6 uppercase tracking-[0.3em]">Ωραριο Λειτουργιας</h4>
                     <div class="flex items-center gap-4 text-white text-lg font-light">
-                        <div class="p-3 rounded-full bg-white/10">
+                        <div class="p-3 rounded-full bg-white/10 shrink-0">
                             <i data-lucide="clock" class="w-5 h-5"></i>
                         </div>
                         <div class="flex flex-col">
-                            <span>Δευτέρα με Σάββατο</span>
+                            <span>Δευτέρα - Παρασκευή</span>
                             <span class="text-sm font-bold tracking-widest text-white/70 uppercase mt-1">*Κατοπιν Ραντεβου</span>
                         </div>
                     </div>
@@ -782,6 +811,7 @@
         </div>
     </footer>
 
+    <!-- Lightbox -->
     <div id="lightbox" class="fixed inset-0 z-[100] flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()">
         <div class="absolute inset-0 bg-brand-dark/95 backdrop-blur-md"></div>
         <button class="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-10 bg-white/10 p-3 rounded-full">
